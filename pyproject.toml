@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dataframe2image"
-version = "0.1.0"
-description = "Convert pandas DataFrame to beautiful table images"
+version = "0.2.0"
+description = "Convert pandas DataFrame to beautiful table images with automatic Chinese font support"
 readme = "README.md"
 requires-python = ">=3.8"
 license = "MIT"
@@ -52,6 +52,9 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+dataframe2image = ["font/*.TTF"]
 
 [tool.black]
 line-length = 88
