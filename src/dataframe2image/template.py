@@ -160,12 +160,8 @@ def render_dataframe_html(df, style, show_index=True, font_files=None):
         for value in row:
             if pd.isna(value):
                 row_data.append("")
-            elif isinstance(value, (int, float, np.number)):
-                if isinstance(value, float):
-                    row_data.append(f"{value:.2f}" if not np.isnan(value) else "")
-                else:
-                    row_data.append(str(value))
             else:
+                # 值已经在预处理阶段格式化了，直接转为字符串
                 row_data.append(str(value))
         data.append((str(idx), row_data))
     

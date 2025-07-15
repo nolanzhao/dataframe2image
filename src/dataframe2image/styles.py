@@ -22,6 +22,7 @@ class TableStyle:
     cell_padding: str = "8px 12px"
     table_border_radius: str = "6px"
     box_shadow: str = "0 2px 8px rgba(0,0,0,0.1)"
+    thousand_separator: bool = False  # 是否添加千分位分隔符
     
     def __post_init__(self) -> None:
         """Set default row background colors if not provided."""
